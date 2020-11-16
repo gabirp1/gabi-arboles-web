@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
     { title: 'Naranjo', snippet: 'Lorem ipsum dolor sit amet consectetur' },
     { title: 'Manzano', snippet: 'Lorem ipsum dolor sit amet consectetur' },
   ];
-  res.render('index', { titulo: 'Inicio', arboles:arboles, clave: variable });
+  res.render('index', { titulo: 'Inicio', arboles:arboles });
 });
 
 app.get('/contacto', (req, res) => {
