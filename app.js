@@ -1,8 +1,7 @@
 const express = require('express')
 
 require('./db/mongoose')
-const taskRouter = require('./routers/task')
-const userRouter = require('./routers/user')
+const treeRouter = require('./routers/tree')
 
 const port = process.env.PORT
 
@@ -34,19 +33,8 @@ app.get('/contacto', (req, res) => {
 });
 
 
-
-
-app.get('/nov', (req, res) => {
-  res.render('novedades', {})
-})
-
-
-
 app.use(express.json())
-app.use('/api', taskRouter)
-app.use('/api', userRouter)
-
-
+app.use('/api', treeRouter)
 
 // 404 page
 app.use((req, res) => {
